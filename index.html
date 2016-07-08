@@ -1,9 +1,30 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Blue1647 Class Example-Index 5</title>
-<link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+
+<title>Blue1647 Class Example Ghanaian Delicious Dishes</title>
+<script language="JavaScript">
+var i = 0;
+var path = new Array();
+ 
+// LIST OF IMAGES
+path[0] = "images/aprapransa1.jpg";
+path[1] = "images/omotuo3.jpg.";
+path[2] = "images/ghanaiangravy2.jpg";
+path[3] = "images/partyfavorite.jpg";
+function swapImage()
+{
+   document.slide.src = path[i];
+   if(i < path.length - 1) i++; else i = 0;
+   setTimeout("swapImage()",3000);
+}
+window.onload=swapImage;
+</script>
+
+
 <style>
+
+
 html  {
   overflow: hidden; 
   height: 100%; 
@@ -23,72 +44,154 @@ body {
 /*reduced the size of the background image height*/
 #container-header {
   float:left; 
-  background:url(Images/kenkeyandfriedfishb.jpg);
+  background:url(images/chickengarlic4.jpg);
   margin: 0px;
   padding: 10px;
   width: 100%;
-  height:600px;
+  height:500px;
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
+  
 }
-#container-header h1{
+
+#address{
+  float:right;
+  width:100%;
+  padding:0;
+  background-color: #930;
+  margin:auto;
+}
+#address li{
+  float:right;
+  width:auto;
+  display:block;
+  padding:0px;
+  background:#930;
+  border-left: 2px solid #fff;
+  text-decoration:none;
+  list-style:none;     
+}
+#address li a{
+  float:right;
+  width:auto;
+  color:#fff;
+  font-size:12px;
+  padding:10px 24px;
+  background:#930;
+  text-decoration:none;
+  list-style:none;
+}
+
+#address li a:hover{
+  float:right;
+  font-size:12px;
+  padding:10px 24px;
+  text-decoration:none;
+  list-style:none;
+  background:#BCBDC7;
+  color:#161956;
+}
+
+#address li a.active{
+  float:right;
+  font-size:12px;
+  padding:10px 24px;
+  text-decoration:none;
+  list-style:none;
+  background:#161956;
+  color:white;
+}
+#address form{
   width: auto;
-  height: 20px;
-  padding-bottom:5px;
+  color:#fff;
+  font-size:14px;
+  padding:6px 0px;
+  font-size:12px;
   text-align: center;
-  color: #ffff00; 
+    background:#930;
 }
 .row{
   width:auto;
   float: left;
   height: auto;
-  }
-  
+  margin-left: 5px;
+}
 .container {
-  width:495px;
-  margin: 10px 12px;
+  width:500px;
+  margin: 10px 10px 0 5px;
   padding: 5px; 
   float:left; 
   background:#fff;
-  border: 3px solid #663333;
-  
-  
-  
+  border: 3px solid #930;
 }
+
+
   h2, h3, h4, h5, h6{
   width: auto;
   height: 20px;
   padding-bottom:5px;
   text-align: center;
-  background-color: #660000;
-  color: #ffff00; 
+  background-color: #930;
+  color: #BCBDC7; 
 }
-/*adjsted width to cover entire screen, got background color from header image*/
-#address{
-  float:left;
-  width:1100px;
-  padding:0px;
-  background: url(Images/redred.jpg);
-  background-repeat: no-repeat;
-  margin:0px;
+
+.picture{
+  float: left;
+  margin: 10px 0px 10px 20px;
+  border: #930;
+  text-align: right;
 }
-/*button image in the list attibute only*/
-#address li{
+.sign{
+  float: left;
+  margin: 10px 0px 10px 5px;
+  width: 1100px;
+  border: #930;
+  position: center;
+  text-align: center;
+}
+.sign-text{
+  float: left;
+  margin: 10px 0px 10px 0px;
+  padding-top: 125px;
+  border: #930;
+  font-size: 300%;
+  font-weight: bold;
+  color: #930;
+  text-align: center;
+}
+p.text {
+  margin-left: 15px;
+}
+footer{
+  width: 100%;
+  height: 100px;
+  clear: both;
+  padding:10px;
+  background-color: #930;
+  color: #fff;
+  text-align: center;
+}
+
+footer ul{
+  text-align: center;
+}
+
+footer li{
   float:left;
   width:150px;
-  height: 120px;
+  height: 35px;
   display:block;
-  padding:0px 3px 0px 0px;
-  background:url(Images/redred.jpg);
-  background-repeat: no-repeat;
+  padding:0px 3px 3px 0px;
   text-decoration:none;
   list-style:none;
-  text-align: center;
-      
+  text-align: center;    
 }
+footer p{
+  text-align: center;
+}
+
 /*removed background image and added padding top to move the text content. increased font to 16px made bolder with text align*/
-#address li a{
+footer li a{
   float:left;
   width:150px;
   padding-top: 33px;
@@ -100,190 +203,255 @@ body {
   text-decoration:none;
   list-style:none;
 }
-/*background hover image is here */
-#address li a:hover{
-  float:left;
-  width:150px;
-  height: 120px;
-  padding-top: 33px;
-  height: 120px;
-  color:#ff0;
-  font-size:16px;
-  font-weight: bolder;
-  text-align: center;
-  text-decoration:none;
-  list-style:none;
-  background:url(Images/jollofrice.jpg);
-  background-repeat: no-repeat;
- 
-}
-/*removed image from here and added border to the top because padding pushed the border behind the image*/
-#address li a.active{
-  float:left;
-  width: 150px;
-  padding-top: 33px;
-  margin: 0px;
-  height: 120px;
-  color:#ff0;
-  font-size:16px;
-  font-weight: bolder;
-  text-align: center;
-  text-decoration:none;
-  list-style:none;
-  border-top: 3px solid yellow;
-}
-img{
-  float: left;
-  margin: 10px 25px;
-  border: #f00;
-  text-align: right;
-}
-footer{
-  width: 100%;
-  height: 120px;
-  clear: both;
-  padding:5px;
-  color: #663333;
-  
-}
-footer ul{
-  text-align: center;
-}
-/*effects the background image*/
-footer li{
-  float:left;
-  width:125px;
-  height:70px;
-  display:block;
-  padding:15px 0px 0 25px;
-  text-decoration:none;
-  list-style:none;
-}
-footer p{
-  text-align: center;
-  font-weight: bolder;
-}
-/*Added background image and added padding top to move the text content. increased font to 16px made bolder with text align* Had a smaller image to fit extra fries so used bg pos center*/
-footer li a{
-  float:left;
-  width:125px;
-  padding: 35px 0 0 10px;
-  height: 70px;
-  background: url(Images/meatpie.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  color:#663333;
-  font-size:18px;
-  font-weight: bolder;
-  text-align: center;
-  text-decoration:none;
-  list-style:none;
-}
+
 /*background hover image is here */
 footer li a:hover{
   float:left;
-  width:125px;
-  height: 70px;
-  padding-top: 35px;
+  width:150px;
+  height: 120px;
+  padding-top 33px  
   color:#ff0;
-  font-size:18px;
+  font-size: 16px
   font-weight: bolder;
   text-align: center;
   text-decoration:none;
   list-style:none;
+
+/*removed image from here and added border to the top because padding pushed the border behind the image*/
+
 }
+
+
 </style>
 
 </head>
 
 
-
-
-
 <body>
 
+<body onload="rotate();swapImage();">   
 <ul id="address">
-                <li><a href="index.html">Index</a></li>
-                <li><a href="index1.html">Index 1</a></li>
-                <li><a href="index2.html">Index 2</a></li>
-                <li><a href="index3.html">Index 3</a></li>
-                <li><a href="index4.html">Index 4</a></li>
-                <li><a class="active" href="index4.html">Index 5</a></li>
-                <li><a href="#">Top</a></li>
-            </ul></div>
+
+<li><a class="active" href="index.html">Index</a></li>
+        <li><a href="index.html">Index 1</a></li>
+        <li><a href="index.html">Index 2</a></li>
+        <li><a href="index.html">Index 3</a></li>
+        <li><a href="index.html">Index 4</a></li>
+
+        
+
+
+
+        <li><IMG SRC="digitblank.gif" border=0 name="hourstens"><IMG SRC="/digitblank.gif" border=0 name="hoursones"><IMG SRC="digitblank.gif" border=0 name="colon"><IMG SRC=digitblank.gif" border=0 name="minstens"><IMG SRC="digitblank.gif" border=0 name="minsones"><IMG SRC="digitblank.gif" border=0 name="ampm">
+
+
+        </li>
+      </ul>
+
+
+
+<SCRIPT LANGUAGE="JavaScript">
+
+  if (document.images) { 
+    digit1 = new Image; 
+    digit1.src = "digit1.gif"; 
+  digit2 = new Image; 
+    digit2.src = "digit2.gif";
+  digit3 = new Image; 
+    digit3.src = "digit3.gif";
+  digit4 = new Image; 
+    digit4.src = "digit4.gif";
+  digit5 = new Image; 
+    digit5.src = "digit5.gif";
+  digit6 = new Image; 
+    digit6.src = "digit6.gif";
+  digit7 = new Image; 
+    digit7.src = "digit7.gif";
+  digit8 = new Image; 
+    digit8.src = "digit8.gif";
+  digit9 = new Image; 
+    digit9.src = "digit9.gif";
+  digit0 = new Image; 
+    digit0.src = "digit0.gif";
+  digitam = new Image; 
+    digitam.src = "digitam.gif";
+  digitpm = new Image; 
+    digitpm.src = "digitpm.gif";
+  digitcolon = new Image;
+  digitcolon.src = "digitcolon.gif";
+  digitblank = new Image;
+  digitblank.src = "digitblank.gif";
+  }
+  
+function UpdateClock(){
+    var today= new Date();
+    hours = today.getHours();
+    mins = today.getMinutes();
+    if (!document.images) return;
+  digit = mins % 10;
+    document.images.minsones.src=eval("digit"+digit+".src");
+  digit = (mins - (mins % 10))/10;
+  document.images.minstens.src=eval("digit"+digit+".src");
+  if (hours > 12)
+    document.images.ampm.src=digitpm.src;
+  else
+    document.images.ampm.src=digitam.src;
+  if (hours > 12) hours = hours - 12;
+  digit = hours % 10;
+  document.images.hoursones.src=eval("digit"+digit+".src");
+  digit = (hours - (hours % 10))/10;
+  document.images.hourstens.src=eval("digit"+digit+".src");
+  document.images.colon.src=digitcolon.src;
+  setTimeout("UpdateClock()",30000);
+
+  }
+
+  UpdateClock();
+
+  </SCRIPT>
+</div>
+
+<div id="container-header"><img height="500" name="slide" src="images/chickengarlic4.jpg" width="100%" /> 
+  
+</div>
+<!--close navigation address-->
+<div class="row">
+<h2>Spices and Condiments</h2>
+<div class="sign"><img src='images/maggicubes.jpg' alt='blinking!' id='blinking_image' /></div>
+
+
+</script>
+
+</div>
+
+
 
 <div id="container-header">
-<h1>Delicious Ghanaian Dish </h1>
+<h1>   Delicious Ghanaian Dish </h1>
 </div>
 <div class="row">
 <div class="container">
-<h2>Red Red  (Sunday Special)</h2>
-<img src="Images/redred.jpg" alt="Poster 1">
- 
+
+<h2>Aprapransa</h2>
+<img src="images/aprapransa1.jpg" alt="Poster 1">
+
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur molestie ante, sed convallis ante egestas vel. Cras suscipit lacinia metus, posuere volutpat est efficitur vel. Cras at lorem interdum, efficitur elit sit amet, blandit est. Curabitur eu massa et dolor venenatis consectetur in vitae lacus. Nunc rhoncus metus id vestibulum tincidunt. Cras et facilisis nibh. Nulla rutrum augue vel blandit varius. Vivamus volutpat justo ut velit scelerisque, et dictum turpis pretium. Fusce eget sem mauris. Pellentesque est ligula, porta id malesuada vel, ultricies suscipit ipsum. Nulla leo dui, sollicitudin eget pretium ac, eleifend quis dolor. Duis et felis sapien.</p>
 
-<p>Suspendisse dolor magna, scelerisque id sapien dapibus, laoreet pellentesque leo. Ut faucibus ac massa vel finibus. Sed malesuada cursus lacus, a volutpat eros commodo vel. Nulla pretium erat sed leo rhoncus, vitae commodo neque aliquet. Suspendisse commodo pretium semper. Sed in semper tortor, pulvinar venenatis diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus a elementum est. Aliquam luctus ut urna at feugiat. Donec turpis tortor, tincidunt at rutrum at, mattis at ante. Nunc varius lorem auctor erat finibus consectetur. Vestibulum sagittis neque quam, ut mattis odio vulputate sed. Nam ipsum augue, vulputate ut dolor vitae, bibendum semper sem. Maecenas vitae posuere dui. Phasellus tristique ipsum diam, ut ultricies diam euismod varius. Praesent aliquet felis ac felis tincidunt sodales.</p>
 
 </div>
+
+<div class="container">
+<h2>Ghanaian Gravy</h2>
+<img src="images/ghanaiangravy2.jpg" alt="Poster 2">
        
-
-
-<div class="container">
-<h2>Spinach Stew With Egusi</h2>
-<img src="Images/spinachstewwithegusi.jpg" alt="Poster 2">
- 
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur molestie ante, sed convallis ante egestas vel. Cras suscipit lacinia metus, posuere volutpat est efficitur vel. Cras at lorem interdum, efficitur elit sit amet, blandit est. Curabitur eu massa et dolor venenatis consectetur in vitae lacus. Nunc rhoncus metus id vestibulum tincidunt. Cras et facilisis nibh. Nulla rutrum augue vel blandit varius. Vivamus volutpat justo ut velit scelerisque, et dictum turpis pretium. Fusce eget sem mauris. Pellentesque est ligula, porta id malesuada vel, ultricies suscipit ipsum. Nulla leo dui, sollicitudin eget pretium ac, eleifend quis dolor. Duis et felis sapien.</p>
 
-<p>Suspendisse dolor magna, scelerisque id sapien dapibus, laoreet pellentesque leo. Ut faucibus ac massa vel finibus. Sed malesuada cursus lacus, a volutpat eros commodo vel. Nulla pretium erat sed leo rhoncus, vitae commodo neque aliquet. Suspendisse commodo pretium semper. Sed in semper tortor, pulvinar venenatis diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus a elementum est. Aliquam luctus ut urna at feugiat. Donec turpis tortor, tincidunt at rutrum at, mattis at ante. Nunc varius lorem auctor erat finibus consectetur. Vestibulum sagittis neque quam, ut mattis odio vulputate sed. Nam ipsum augue, vulputate ut dolor vitae, bibendum semper sem. Maecenas vitae posuere dui. Phasellus tristique ipsum diam, ut ultricies diam euismod varius. Praesent aliquet felis ac felis tincidunt sodales.</p>
-
 </div>
 </div>
 
 <div class="row">
-<h2>Jollof Rice</h2>
+<h2>Sunday Best</h2>
 
- <p><img src="Images/jollofrice.jpg" alt="Poster 1"><iframe width="754" height="380" src="https://www.youtube.com/embed/rwS8EIJw-Cw" frameborder="0" allowfullscreen></iframe></p>
- <p>Suspendisse dolor magna, scelerisque id sapien dapibus, laoreet pellentesque leo. Ut faucibus ac massa vel finibus. Sed malesuada cursus lacus, a volutpat eros commodo vel. Nulla pretium erat sed leo rhoncus, vitae commodo neque aliquet. Suspendisse commodo pretium semper. Sed in semper tortor, pulvinar venenatis diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus a elementum est. Aliquam luctus ut urna at feugiat. Donec turpis tortor, tincidunt at rutrum at, mattis at ante. Nunc varius lorem auctor erat finibus consectetur. Vestibulum sagittis neque quam, ut mattis odio vulputate sed. Nam ipsum augue, vulputate ut dolor vitae, bibendum semper sem. Maecenas vitae posuere dui. Phasellus tristique ipsum diam, ut ultricies diam euismod varius. Praesent aliquet felis ac felis tincidunt sodales.</p>
 
- <p>Suspendisse dolor magna, scelerisque id sapien dapibus, laoreet pellentesque leo. Ut faucibus ac massa vel finibus. Sed malesuada cursus lacus, a volutpat eros commodo vel. Nulla pretium erat sed leo rhoncus, vitae commodo neque aliquet. Suspendisse commodo pretium semper. Sed in semper tortor, pulvinar venenatis diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus a elementum est. Aliquam luctus ut urna at feugiat. Donec turpis tortor, tincidunt at rutrum at, mattis at ante. Nunc varius lorem auctor erat finibus consectetur. Vestibulum sagittis neque quam, ut mattis odio vulputate sed. Nam ipsum augue, vulputate ut dolor vitae, bibendum semper sem. Maecenas vitae posuere dui. Phasellus tristique ipsum diam, ut ultricies diam euismod varius. Praesent aliquet felis ac felis tincidunt sodales.</p>
-<hr>
+
+
+ <div class="picture"><img src="images/omotuo3.jpg" alt="Poster 1"></div>
+ <div class="picture"><img src="images/pancake.jpg" alt="Poster 1"></div>
+ </div>
+
+<div class="row">
+<h2>Red Red</h2>
+
+ <div class="picture"><img src="images/garden-egg-stew5.jpg" alt="Poster 2"></div>
+ <div class="picture">  <img src="images/plantainwithbeans.jpg" alt="Poster 1"></div>
 </div>
 
 <div class="row">
-<h2>Jollof Rice</h2>
+<h2>Jollof Rice and Kebab</h2>
 
- <p><img src="Images/jollofrice.jpg" alt="Poster 2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur molestie ante, sed convallis ante egestas vel. Cras suscipit lacinia metus, posuere volutpat est efficitur vel. Cras at lorem interdum, efficitur elit sit amet, blandit est. Curabitur eu massa et dolor venenatis consectetur in vitae lacus. Nunc rhoncus metus id vestibulum tincidunt. Cras et facilisis nibh. Nulla rutrum augue vel blandit varius. Vivamus volutpat justo ut velit scelerisque, et dictum turpis pretium. Fusce eget sem mauris. Pellentesque est ligula, porta id malesuada vel, ultricies suscipit ipsum. Nulla leo dui, sollicitudin eget pretium ac, eleifend quis dolor. Duis et felis sapien.</p>
+ <div class="picture"><img src="images/partyfavorite.jpg" alt="Poster 2"></div>
+ <div class="picture">  <img src="images/babs.jpg" alt="Poster 1"></div>
+</div>
 
- <p>Suspendisse dolor magna, scelerisque id sapien dapibus, laoreet pellentesque leo. Ut faucibus ac massa vel finibus. Sed malesuada cursus lacus, a volutpat eros commodo vel. Nulla pretium erat sed leo rhoncus, vitae commodo neque aliquet. Suspendisse commodo pretium semper. Sed in semper tortor, pulvinar venenatis diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus a elementum est. Aliquam luctus ut urna at feugiat. Donec turpis tortor, tincidunt at rutrum at, mattis at ante. Nunc varius lorem auctor erat finibus consectetur. Vestibulum sagittis neque quam, ut mattis odio vulputate sed. Nam ipsum augue, vulputate ut dolor vitae, bibendum semper sem. Maecenas vitae posuere dui. Phasellus tristique ipsum diam, ut ultricies diam euismod varius. Praesent aliquet felis ac felis tincidunt sodales.</p>
 
- <p>Suspendisse dolor magna, scelerisque id sapien dapibus, laoreet pellentesque leo. Ut faucibus ac massa vel finibus. Sed malesuada cursus lacus, a volutpat eros commodo vel. Nulla pretium erat sed leo rhoncus, vitae commodo neque aliquet. Suspendisse commodo pretium semper. Sed in semper tortor, pulvinar venenatis diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus a elementum est. Aliquam luctus ut urna at feugiat. Donec turpis tortor, tincidunt at rutrum at, mattis at ante. Nunc varius lorem auctor erat finibus consectetur. Vestibulum sagittis neque quam, ut mattis odio vulputate sed. Nam ipsum augue, vulputate ut dolor vitae, bibendum semper sem. Maecenas vitae posuere dui. Phasellus tristique ipsum diam, ut ultricies diam euismod varius. Praesent aliquet felis ac felis tincidunt sodales.</p>
-<hr>
+<div class="row">
+<h2>Snack Crab  & Fufu with Palm nut Soup</h2>
+
+ <div class="picture"><img src="images/snackcrab.jpg" alt="Poster 1"></div>
+ <div class="picture"><img src="images/palm-nut-soup6.jpg" alt="Poster 3"></div>
+
 </div>
 
 <div class="row">
-<h2>Meat Pie</h2>
+<h2>Natural Fruit Beverages</h2>
 
- <p><img src="Images/meatpie.jpg" alt="Poster 3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur molestie ante, sed convallis ante egestas vel. Cras suscipit lacinia metus, posuere volutpat est efficitur vel. Cras at lorem interdum, efficitur elit sit amet, blandit est. Curabitur eu massa et dolor venenatis consectetur in vitae lacus. Nunc rhoncus metus id vestibulum tincidunt. Cras et facilisis nibh. Nulla rutrum augue vel blandit varius. Vivamus volutpat justo ut velit scelerisque, et dictum turpis pretium. Fusce eget sem mauris. Pellentesque est ligula, porta id malesuada vel, ultricies suscipit ipsum. Nulla leo dui, sollicitudin eget pretium ac, eleifend quis dolor. Duis et felis sapien.</p>
+ <div class="picture"><img src="images/shashajuice.jpg"/></div>
+ 
+ <div class="picture"><img name="slide1" src="images/fruitjuice.jpg"/></div>
+ <script language="JavaScript">
+var i = 0;
+var path1 = new Array();
 
- <p>Suspendisse dolor magna, scelerisque id sapien dapibus, laoreet pellentesque leo. Ut faucibus ac massa vel finibus. Sed malesuada cursus lacus, a volutpat eros commodo vel. Nulla pretium erat sed leo rhoncus, vitae commodo neque aliquet. Suspendisse commodo pretium semper. Sed in semper tortor, pulvinar venenatis diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus a elementum est. Aliquam luctus ut urna at feugiat. Donec turpis tortor, tincidunt at rutrum at, mattis at ante. Nunc varius lorem auctor erat finibus consectetur. Vestibulum sagittis neque quam, ut mattis odio vulputate sed. Nam ipsum augue, vulputate ut dolor vitae, bibendum semper sem. Maecenas vitae posuere dui. Phasellus tristique ipsum diam, ut ultricies diam euismod varius. Praesent aliquet felis ac felis tincidunt sodales.</p>
 
- <p>Suspendisse dolor magna, scelerisque id sapien dapibus, laoreet pellentesque leo. Ut faucibus ac massa vel finibus. Sed malesuada cursus lacus, a volutpat eros commodo vel. Nulla pretium erat sed leo rhoncus, vitae commodo neque aliquet. Suspendisse commodo pretium semper. Sed in semper tortor, pulvinar venenatis diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus a elementum est. Aliquam luctus ut urna at feugiat. Donec turpis tortor, tincidunt at rutrum at, mattis at ante. Nunc varius lorem auctor erat finibus consectetur. Vestibulum sagittis neque quam, ut mattis odio vulputate sed. Nam ipsum augue, vulputate ut dolor vitae, bibendum semper sem. Maecenas vitae posuere dui. Phasellus tristique ipsum diam, ut ultricies diam euismod varius. Praesent aliquet felis ac felis tincidunt sodales.</p>
-<hr>
+// LIST OF IMAGES
+path1[0] = "images/shashajuice.jpg";
+path1[1] = "images/fruitjuice.jpg";
+path1[2] = "images/pineapplejuice.jpg";
+
+function swapImage()
+{
+   document.slide1.src = path1[i];
+   if(i < path1.length - 1) i++; else i = 0;
+   setTimeout("swapImage()",3000);
+}
+window.onload=swapImage;
+</script>
 </div>
+
+
 <div class="row">
-<h2>Kebab</h2>
+<h2>Form</h2>
+<p>Required fields are <b>bold</b></p>
 
- <p><img src="Images/kebab.jpg" alt="Poster 3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur molestie ante, sed convallis ante egestas vel. Cras suscipit lacinia metus, posuere volutpat est efficitur vel. Cras at lorem interdum, efficitur elit sit amet, blandit est. Curabitur eu massa et dolor venenatis consectetur in vitae lacus. Nunc rhoncus metus id vestibulum tincidunt. Cras et facilisis nibh. Nulla rutrum augue vel blandit varius. Vivamus volutpat justo ut velit scelerisque, et dictum turpis pretium. Fusce eget sem mauris. Pellentesque est ligula, porta id malesuada vel, ultricies suscipit ipsum. Nulla leo dui, sollicitudin eget pretium ac, eleifend quis dolor. Duis et felis sapien.</p>
+<form action="contact.php" method="post">
+<p><b>Your Name:</b> <input type="text" name="yourname" /><br />
+<b>Subject:</b> <input type="text" name="subject" /><br />
+<b>E-mail:</b> <input type="text" name="email" /><br />
+Website: <input type="text" name="website"></p>
 
- <p>Suspendisse dolor magna, scelerisque id sapien dapibus, laoreet pellentesque leo. Ut faucibus ac massa vel finibus. Sed malesuada cursus lacus, a volutpat eros commodo vel. Nulla pretium erat sed leo rhoncus, vitae commodo neque aliquet. Suspendisse commodo pretium semper. Sed in semper tortor, pulvinar venenatis diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus a elementum est. Aliquam luctus ut urna at feugiat. Donec turpis tortor, tincidunt at rutrum at, mattis at ante. Nunc varius lorem auctor erat finibus consectetur. Vestibulum sagittis neque quam, ut mattis odio vulputate sed. Nam ipsum augue, vulputate ut dolor vitae, bibendum semper sem. Maecenas vitae posuere dui. Phasellus tristique ipsum diam, ut ultricies diam euismod varius. Praesent aliquet felis ac felis tincidunt sodales.</p>
+<p>Do you like this website?
+<input type="radio" name="likeit" value="Yes" checked="checked" /> Yes
+<input type="radio" name="likeit" value="No" /> No
+<input type="radio" name="likeit" value="Not sure" /> Not sure</p>
 
- <p>Suspendisse dolor magna, scelerisque id sapien dapibus, laoreet pellentesque leo. Ut faucibus ac massa vel finibus. Sed malesuada cursus lacus, a volutpat eros commodo vel. Nulla pretium erat sed leo rhoncus, vitae commodo neque aliquet. Suspendisse commodo pretium semper. Sed in semper tortor, pulvinar venenatis diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus a elementum est. Aliquam luctus ut urna at feugiat. Donec turpis tortor, tincidunt at rutrum at, mattis at ante. Nunc varius lorem auctor erat finibus consectetur. Vestibulum sagittis neque quam, ut mattis odio vulputate sed. Nam ipsum augue, vulputate ut dolor vitae, bibendum semper sem. Maecenas vitae posuere dui. Phasellus tristique ipsum diam, ut ultricies diam euismod varius. Praesent aliquet felis ac felis tincidunt sodales.</p>
+<p>How did you find us?
+<select name="how">
+<option value=""> -- Please select -- </option>
+<option>Google</option>
+<option>Yahoo</option>
+<option>Link from a website</option>
+<option>Word of mouth</option>
+<option>Other</option>
+</select>
+
+<p><b>Your comments:</b><br />
+<textarea name="comments" rows="10" cols="150"></textarea></p>
+
+<p><input type="submit" value="Send it!"></p>
+
+<p> </p>
+<p>Powered by <a href="http://myphpform.com">PHP form</a></p>
+
+</form>
 </div>
+
+
+
 <footer>
-<p>Class Example of a Static Website &copy; Godwin Dorvlo 2016</p>
+<p>Class Example 6 of a Static Website &copy; Godwin Dorvlo 2016</p>
 <ul>
-                <li><a href="index.html">Index</a></li>
-                <li><a href="index2.html">Index 1</a></li>
+               <li><a href="index.html">Index</a></li>
+                <li><a href="index1.html">Index 1</a></li>
                 <li><a href="index2.html">Index 2</a></li>
                 <li><a href="index3.html">Index 3</a></li>
                 <li><a href="index4.html">Index 4</a></li>
@@ -292,5 +460,24 @@ footer li a:hover{
             </ul>
 
 </footer>
+
+<script></script>
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
