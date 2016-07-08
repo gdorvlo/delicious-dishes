@@ -386,29 +386,25 @@ function UpdateClock(){
 <h2>Natural Fruit Beverages</h2>
 
  <div class="picture"><img src="Images/shashajuice.jpg"/></div>
- // -------
+
  <script language="JavaScript">
-var i = 0;
+var j = 0;
 var path1 = new Array();
  
 // LIST OF IMAGES
-path[0] = "Images/aprapransa1.jpg";
-path[1] = "Images/omotuo3.jpg";
-path[2] = "Images/ghanaiangravy2.jpg";
-path[3] = "Images/partyfavorite.jpg";
+path1[0] = "Images/aprapransa1.jpg";
+path1[1] = "Images/omotuo3.jpg";
+path1[2] = "Images/ghanaiangravy2.jpg";
+path1[3] = "Images/partyfavorite.jpg";
 function rotateImage()
 {
-   document.slide1.src = path[i];
-   if(i < path1.length - 1) i++; else i = 0;
+   document.slide1.src = path1[j];
+   if(j < path1.length - 1) j++; else j = 0;
    setTimeout("rotateImage()",3000);
 }
 
 </script>
  
-
-
-
-//--------
 
 </div>
 
