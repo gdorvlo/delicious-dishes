@@ -228,10 +228,8 @@ footer li a:hover{
 
 
 <body>
- 
-//rotateImage();
 
-<body onload="swapImage()">   
+<body onload="swapImage();rotateImage()">   
 <ul id="address">
 
 <li><a class="active" href="index.html">Index</a></li>
@@ -388,6 +386,24 @@ function UpdateClock(){
 <h2>Natural Fruit Beverages</h2>
 
  <div class="picture"><img src="Images/shashajuice.jpg"/></div>
+ <div class="picture"><img name="slide1" src="Images/aprapransa1.jpg"/></div>
+ <script language="JavaScript">
+var j = 0;
+var path1 = new Array();
+ 
+// LIST OF IMAGES
+path1[0] = "Images/aprapransa1.jpg";
+path1[1] = "Images/omotuo3.jpg";
+path1[2] = "Images/ghanaiangravy2.jpg";
+path1[3] = "Images/partyfavorite.jpg";
+function rotateImage()
+{
+   document.slide1.src = path1[j];
+   if(j < path1.length - 1) j++; else j = 0;
+   setTimeout("rotateImage()",3000);
+}
+
+</script>
 
  
  
